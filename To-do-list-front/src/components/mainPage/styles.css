@@ -1,12 +1,22 @@
-#container{
+#container {
   display: flex;
   flex-direction: column;
   width: 100vw;
   align-items: center;
-
-
+  gap:10px
 }
 
-#to-does-container{
+#to-does-container {
   display: flex;
+}
+
+.eachRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button{
+  width: 200px;
+  background-color: rgb(201, 187, 187);
 }
