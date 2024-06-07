@@ -7,10 +7,12 @@ interface TaskListInterface {
   toDolistSetter: (tasks: ToDoInterface[]) => void;
 }
 
+
 const ListOfToDoesComponent = ({
   listOfToDoes,
   toDolistSetter,
 }: TaskListInterface) => {
+
 
 
   const deleteToDoHandler = (toDo: ToDoInterface) => {
@@ -21,6 +23,9 @@ const ListOfToDoesComponent = ({
     );
   };
 
+  
+
+
   return (
     <div>
       {listOfToDoes.length <= 0
@@ -30,7 +35,8 @@ const ListOfToDoesComponent = ({
              
               <div key={eachTodo.todo_id}> {eachTodo.title}</div>
               <ToDoComponent toDo={eachTodo} listOfToDoes={listOfToDoes} toDolistSetter={toDolistSetter} />
-              <button className="btn">Edit</button>
+             
+
               <button
                 className="btn"
                 onClick={() => deleteToDoHandler(eachTodo)}

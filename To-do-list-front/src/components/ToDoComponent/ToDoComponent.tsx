@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ToDoInterface } from '../../interfaces/interfaces';
 import './styles.css';
+import ModalEditPageComponent from '../ModalEditPageComponent/ModalEditPageComponent';
 
 interface TaskInterface {
   toDo: ToDoInterface;
@@ -13,10 +14,11 @@ const ToDoComponent = ({
   listOfToDoes,
   toDolistSetter,
 }: TaskInterface) => {
-  const [statusToDo, setToDoStatus] = useState<boolean>(false);
+  // const [statusToDo, setToDoStatus] = useState<boolean>(false);
+  const [modal, setModal] = useState<boolean>(false);
 
   const completionToDoHandler = () => {
-    setToDoStatus(!statusToDo);
+    // setToDoStatus(!statusToDo);
     toDolistSetter((prev) => {
       return prev.map((eachTodo: ToDoInterface) => {
         if (eachTodo.todo_id === toDo.todo_id) {
@@ -25,6 +27,14 @@ const ToDoComponent = ({
       });
     });
     console.log(listOfToDoes);
+  };
+
+  const openModal = () => {
+    setModal(!modal);
+  };
+
+  const closeModal = () => {
+    setModal(!modal);
   };
 
   return (
@@ -37,6 +47,20 @@ const ToDoComponent = ({
 
       <div className={toDo.status ? 'cross-line' : 'each-row '}>
         {toDo.title}
+      </div>
+      <button className="btn" onClick={openModal}>
+        Edit
+      </button>
+      <div>
+        {modal ? (
+          <ModalEditPageComponent
+            closeFun={closeModal}
+            toDoListSetter={toDolistSetter}
+            toDo={toDo}
+          />
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );
