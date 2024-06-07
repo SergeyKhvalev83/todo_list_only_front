@@ -34,7 +34,7 @@ const MainPageComponent = () => {
           onChange={inputHandler}
           value={toDoTitle}
         ></input>
-        <button onClick={addToDoHandler}> add task </button>
+        <button id="add-toDo-btn" onClick={addToDoHandler}> add task </button>
       </div>
       <ListOfToDoesComponent listOfToDoes={toDoesList} toDolistSetter={setTodoesList} />
     </div>

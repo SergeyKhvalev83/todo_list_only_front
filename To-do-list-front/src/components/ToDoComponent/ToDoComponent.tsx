@@ -38,7 +38,7 @@ const ToDoComponent = ({
   };
 
   return (
-    <div>
+    <div className="check-title-edit">
       <input
         type="checkbox"
         onChange={completionToDoHandler}
@@ -48,7 +48,7 @@ const ToDoComponent = ({
       <div className={toDo.status ? 'cross-line' : 'each-row '}>
         {toDo.title}
       </div>
-      <button className="btn" onClick={openModal}>
+      <button className="edit-btn" onClick={openModal}>
         Edit
       </button>
       <div>

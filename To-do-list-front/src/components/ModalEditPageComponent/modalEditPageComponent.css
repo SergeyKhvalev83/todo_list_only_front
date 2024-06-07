@@ -1,0 +1,25 @@
+#modal-container{
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background-color: gray;
+  top: 220px;
+  left: 520px;
+  border-radius: 8px;
+}
+
+#flex-container-modal{
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#editBtn-modal {
+  width: 100px;
+  height:fit-content;
+}
+
+#edit-input{
+  height: fit-content;
+}

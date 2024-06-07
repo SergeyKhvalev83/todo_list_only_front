@@ -1,3 +1,13 @@
 .cross-line{
   text-decoration: line-through;
 }
+.check-title-edit{
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.edit-btn{
+  width: 86px;
+  background-color: rgb(201, 187, 187);
+}

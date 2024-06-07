@@ -25,24 +25,28 @@ const ModalEditPageComponent = ({
     toDoListSetter((prev) => {
       return prev.map((eachToDo: ToDoInterface) => {
         if (eachToDo.todo_id === toDo.todo_id) {
-          return { ...eachToDo, title: editedTitle };
+          if (editedTitle.length === 0) {
+            return eachToDo;
+          } else {
+            return { ...eachToDo, title: editedTitle };
+          }
         } else return eachToDo;
       });
     });
 
-    closeFun;
+    closeFun();
   };
 
   return (
     <div id="modal-container">
-      <div>
-        <input
+      <div id="flex-container-modal">
+        <input id="edit-input"
           type="text"
           placeholder="text edit"
           value={editedTitle}
           onChange={editInputTitleHandler}
         />
-        <button onClick={editTitleHandler}>EditModal</button>
+        <button id="editBtn-modal" onClick={editTitleHandler}>EditModal</button>
       </div>
     </div>
   );

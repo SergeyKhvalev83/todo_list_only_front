@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import { ToDoInterface } from '../../interfaces/interfaces';
 import ToDoComponent from '../ToDoComponent/ToDoComponent';
-
+import './styles.css'
 interface TaskListInterface {
   listOfToDoes: ToDoInterface[];
   toDolistSetter: (tasks: ToDoInterface[]) => void;
@@ -32,15 +31,10 @@ const ListOfToDoesComponent = ({
         ? 'nothing to do'
         : listOfToDoes.map((eachTodo) => (
             <div key={eachTodo.todo_id} className="eachRow" >
-             
-              <div key={eachTodo.todo_id}> {eachTodo.title}</div>
               <ToDoComponent toDo={eachTodo} listOfToDoes={listOfToDoes} toDolistSetter={toDolistSetter} />
-             
-
               <button
-                className="btn"
-                onClick={() => deleteToDoHandler(eachTodo)}
-              >
+                className="delete-btn"
+                onClick={() => deleteToDoHandler(eachTodo)}>
                 Delete
               </button>
             </div>
