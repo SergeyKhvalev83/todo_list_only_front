@@ -36,3 +36,7 @@
   width: 100px;
   word-wrap:break-word
 }
+
+#modal-parent{
+position: relative;
+}

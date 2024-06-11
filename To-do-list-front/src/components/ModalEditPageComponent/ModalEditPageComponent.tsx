@@ -42,11 +42,11 @@ const ModalEditPageComponent = ({
       <div id="flex-container-modal">
         <input id="edit-input"
           type="text"
-          placeholder="text edit"
+          placeholder="edit task title"
           value={editedTitle}
           onChange={editInputTitleHandler}
         />
-        <button id="editBtn-modal" onClick={editTitleHandler}>EditModal</button>
+        <button id="editBtn-modal" onClick={editTitleHandler}>Edit</button>
       </div>
     </div>
   );

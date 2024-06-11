@@ -28,9 +28,9 @@ const MainPageComponent = () => {
     <div id="container">
       <div id="to-does-container">
         <input
-          className="input"
+          id="input"
           type="text"
-          placeholder="text what needs to be done"
+          placeholder="task to be done"
           onChange={inputHandler}
           value={toDoTitle}
         ></input>

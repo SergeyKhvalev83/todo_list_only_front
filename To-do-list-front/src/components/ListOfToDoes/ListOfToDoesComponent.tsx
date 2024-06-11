@@ -12,12 +12,6 @@ const ListOfToDoesComponent = ({
   toDolistSetter,
 }: TaskListInterface) => {
 
-
-
-  
-  
-
-
   return (
     <div id="todoes-container">
       {listOfToDoes.length <= 0

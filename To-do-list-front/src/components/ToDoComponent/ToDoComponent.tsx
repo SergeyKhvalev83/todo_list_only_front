@@ -64,7 +64,7 @@ const ToDoComponent = ({
           Delete
         </button>
 
-      <div>
+      <div id="modal-parent">
         {modal ? (
           <ModalEditPageComponent
             closeFun={closeModal}

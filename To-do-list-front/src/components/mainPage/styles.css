@@ -17,3 +17,7 @@
   background-color: rgb(201, 187, 187);
 }
 
+#input::placeholder{
+  color: gray;
+  opacity: 0.5;
+}
