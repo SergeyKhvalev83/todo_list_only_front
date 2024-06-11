@@ -4,10 +4,35 @@
 .check-title-edit{
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
+  width: 400px;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px, solid, gray;
+  padding: 10px;
+  
+
+
 }
 
-.edit-btn{
+.edit-btn, .delete-btn{
+  display:block;
   width: 86px;
   background-color: rgb(201, 187, 187);
+}
+
+.check-and-title{
+  display: flex;
+  width: 100px;
+  overflow-wrap: break-word; /* Also ensures breaking long words */
+ 
+}
+
+.btn-controlls{
+  display: flex;
+}
+
+.each-row{
+  width: 100px;
+  word-wrap:break-word
 }

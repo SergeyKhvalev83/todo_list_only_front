@@ -37,20 +37,33 @@ const ToDoComponent = ({
     setModal(!modal);
   };
 
+  const deleteToDoHandler = () => {
+    toDolistSetter(
+      listOfToDoes.filter(
+        (eachTodo: ToDoInterface) => eachTodo.todo_id !== toDo.todo_id
+      )
+    );
+  };
+
   return (
     <div className="check-title-edit">
-      <input
-        type="checkbox"
-        onChange={completionToDoHandler}
-        checked={toDo.status ? true : false}
-      />
+        <input
+          type="checkbox"
+          onChange={completionToDoHandler}
+          checked={toDo.status ? true : false}
+        />
 
-      <div className={toDo.status ? 'cross-line' : 'each-row '}>
-        {toDo.title}
-      </div>
-      <button className="edit-btn" onClick={openModal}>
-        Edit
-      </button>
+        <div className={toDo.status ? 'cross-line each-row' : 'each-row'}>
+          {toDo.title}
+        </div>
+        <button className="edit-btn" onClick={openModal}>
+          Edit
+        </button>
+
+        <button className="delete-btn" onClick={deleteToDoHandler}>
+          Delete
+        </button>
+
       <div>
         {modal ? (
           <ModalEditPageComponent

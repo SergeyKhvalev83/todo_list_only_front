@@ -1,4 +1,11 @@
-.delete-btn{
-  background-color: rgb(201, 187, 187);
-
+#todoes-container{
+width: 400px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap:15px
 }
+
+
+
+

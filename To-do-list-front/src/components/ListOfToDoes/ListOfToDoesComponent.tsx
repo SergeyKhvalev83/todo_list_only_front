@@ -14,29 +14,17 @@ const ListOfToDoesComponent = ({
 
 
 
-  const deleteToDoHandler = (toDo: ToDoInterface) => {
-    toDolistSetter(
-      listOfToDoes.filter(
-        (eachTodo: ToDoInterface) => eachTodo.todo_id !== toDo.todo_id
-      )
-    );
-  };
-
+  
   
 
 
   return (
-    <div>
+    <div id="todoes-container">
       {listOfToDoes.length <= 0
         ? 'nothing to do'
         : listOfToDoes.map((eachTodo) => (
             <div key={eachTodo.todo_id} className="eachRow" >
               <ToDoComponent toDo={eachTodo} listOfToDoes={listOfToDoes} toDolistSetter={toDolistSetter} />
-              <button
-                className="delete-btn"
-                onClick={() => deleteToDoHandler(eachTodo)}>
-                Delete
-              </button>
             </div>
           ))}
     </div>

@@ -3,18 +3,13 @@
   flex-direction: column;
   width: 100vw;
   align-items: center;
-  gap:10px
+  gap: 10px;
 }
 
 #to-does-container {
   display: flex;
-}
-
-.eachRow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 300px;
+  gap: 20px;
+  width: 400px;
 }
 
 #add-toDo-btn {
